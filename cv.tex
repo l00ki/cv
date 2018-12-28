@@ -1,0 +1,156 @@
+% CV template by Lukas Schreder
+% 2018-12-22
+% This file is dedicated to the public domain
+
+\documentclass{article}
+
+\usepackage{fullpage}
+\usepackage{minipage-marginpar}
+
+\setlength{\parindent}{0pt}
+
+% personal details
+\def \name {Lukas Schreder BSc}
+\def \street {Dreierweg 5}
+\def \town {8155 Niederhasli}
+\def \country {Switzerland}
+\def \phone {+41 76 582 31 23}
+\def \email {lukas@lukasschreder.xyz}
+\def \homepage {lukasschreder.xyz}
+\def \dob {21.08.1994}
+\def \citizenship {German citizen}
+\def \permit {Swiss B permit}
+
+% macros
+\renewcommand*{\maketitle}[1]{\def\@title{#1}}
+\renewcommand{\maketitle}{
+  \newpage
+  \begin{minipage}[t]{.5\linewidth}
+    \begin{flushleft}
+      {\bfseries \large \name \\}
+      \street \\
+      \town \\
+      \country \\
+      \phone \\
+      \email \\
+      \homepage \\
+      \bigskip
+      born on \dob \\
+      \citizenship \\
+      \permit
+    \end{flushleft}
+  \end{minipage}
+
+  \begin{minipage}[t]{.5\linewidth}
+    \raggedleft
+  \end{minipage}
+}
+
+\newcommand{\cventry}[3]{
+  \begin{minipage}[t]{.24\linewidth}
+    \begin{flushright}
+      #1
+    \end{flushright}
+  \end{minipage}
+  \hspace{\fill}
+  \begin{minipage}[t]{.70\linewidth}
+    \textbf{#2}\\
+    #3 
+  \end{minipage}
+  \vspace{1.5em}
+}
+
+\newcommand{\skillentry}[2]{
+  \begin{minipage}[t]{.24\linewidth}
+    \begin{flushright}
+      #1
+    \end{flushright}
+  \end{minipage}
+  \hspace{\fill}
+  \begin{minipage}[t]{.70\linewidth}
+    #2
+  \end{minipage}
+  \vspace{1.5em}
+}
+
+\renewcommand{\section}[1]{
+  \vspace{2em}
+
+  \begin{minipage}[t]{.24\linewidth}
+  \end{minipage}
+  \hspace{\fill}
+  \begin{minipage}[t]{.70\linewidth}
+    {\raggedright \bfseries \Large#1}
+  \end{minipage}
+  \vspace{1.5em}
+}
+
+% body
+\begin{document}
+
+\maketitle
+
+\section{Education}
+
+\cventry{Since 09/2017}
+        {ETH Z\"urich, Chemistry MSc}
+        {Focus: Theoretical Chemistry \\
+         Electives: Advanced Quantum Chemistry; Computer Simulation in Chemistry, Biology and Physics; Game Theory \\
+         Prospective graduation in 2019}
+
+\cventry{09/2014 - 09/2018}
+        {ETH Z\"urich, Chemistry BSc}
+        {Focus: Computational and Theoretical Chemistry \\
+         Electives: Quantum Chemistry; Signal Processing; Programming and Application Development in C\plus\plus; Philosophical Aspects of Quantum Mechanics}
+
+\cventry{04/2014}
+        {Johannes-Gymnasium Lahnstein, Abitur}
+        {Focus: Chemistry, Mathematics, English}
+
+
+\section{Research}
+
+\cventry{09/2018 - 02/2019}
+        {The Dressed Spin Picture in EPR Spectroscopy}
+        {ETH Z\"urich, with Gunnar Jeschke, supervised by Nino Wili}
+
+\cventry{09/2017 - 02/2018}
+        {Deriving Off-Site Charge Parameters to Model Anisotropic Charge Distributions in Phenyl Halides}
+        {ETH Z\"urich, with Sereina Riniker, supervised by Patrick Bleiziffer}
+
+
+\section{Teaching}
+
+\cventry{09/2018 - 12/2019}
+        {Advanced Physical Chemistry: Statistical Thermodynamics\\529-0433-01L}
+        {ETH Z\"urich, with Gunnar Jeschke and Jeremy Richardson}
+
+\cventry{09/2018 - 12/2018}
+        {Chemie (f\"ur Mediziner) 529-5000-00L} 
+        {ETH Z\"urich, with Karl-Heinz Altmann}
+        
+\cventry{09/2016 - 12/2018}
+        {Chemie 529-0010-00L}        
+        {ETH Z\"urich, with Cecilia Mondelli}
+
+\cventry{01/2017 - 02/2017}        
+        {Praktikum Chemie 529-0030-00L}        
+        {ETH Z\"urich, with Nikita Kobert}
+
+
+\section{Skills}
+
+\skillentry{Languages}{German (native), English (fluent)}
+
+\skillentry{Programming}{C++, R, Haskell, Python, MATLAB, Bash, HTML, CSS}
+
+\skillentry{UNIX}{Gentoo GNU/Linux, Debian GNU/Linux, macOS}
+
+\skillentry{Tools}{MATLAB, \LaTeX, Unity Engine, Unreal Engine, Blender}
+
+
+\section{References}
+
+\skillentry{\quad}{Available upon request}
+
+\end{document}

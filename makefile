@@ -1,0 +1,2 @@
+all: 	cv.tex
+	pdflatex $<
